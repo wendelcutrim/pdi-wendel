@@ -1,3 +1,5 @@
+console.log("Start JS");
+
 const width = window.innerWidth;
 const menuButton = document.querySelector("#open-menu");
 const closeMenuButton = document.querySelector("#close-menu");
@@ -9,6 +11,7 @@ if (width <= 768) {
 
 menuButton.addEventListener("click", handleMenuMobile);
 closeMenuButton.addEventListener("click", handleMenuMobile);
+nav.addEventListener("click", closeMenuMobile)
 
 function handleMenuMobile(evt) {
     nav.classList.add("active");
@@ -32,4 +35,12 @@ function handleMenuMobile(evt) {
         }
     }
 
+}
+
+function closeMenuMobile(evt) {
+    if (evt.target.hasAttribute("href")) {
+        nav.classList.remove("active")
+        closeMenuButton.classList.remove("active");
+        menuButton.classList.add("active");
+    }
 }
