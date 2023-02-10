@@ -1,17 +1,24 @@
 console.log("Start JS");
 
+
 const width = window.innerWidth;
 const menuButton = document.querySelector("#open-menu");
 const closeMenuButton = document.querySelector("#close-menu");
 const nav = document.querySelector("nav");
+const acc = document.querySelectorAll(".accordion");
+
 
 if (width <= 768) {
-    menuButton.classList.add("active")
+    menuButton.classList.add("active");
 }
 
 menuButton.addEventListener("click", handleMenuMobile);
 closeMenuButton.addEventListener("click", handleMenuMobile);
-nav.addEventListener("click", closeMenuMobile)
+nav.addEventListener("click", closeMenuMobile);
+acc.forEach(el => {
+    el.addEventListener("click", handleAccordionClick);
+});
+
 
 function handleMenuMobile(evt) {
     nav.classList.add("active");
@@ -42,5 +49,27 @@ function closeMenuMobile(evt) {
         nav.classList.remove("active")
         closeMenuButton.classList.remove("active");
         menuButton.classList.add("active");
+    }
+}
+
+function handleAccordionClick(evt) {
+    const acc = evt.target;
+    const panel = acc.nextElementSibling;
+    const expand = acc.querySelector("span");
+    console.log(expand.innerText)
+
+    acc.classList.toggle("active");
+
+    if (panel.style.display === "block") {
+        panel.style.display = "none";
+        expand.innerText = "expand_more";
+        acc.style.marginBottom = "1rem";
+
+
+    } else {
+        panel.style.display = "block";
+        expand.innerText = "expand_less";
+        acc.style.marginBottom = "0";
+
     }
 }
