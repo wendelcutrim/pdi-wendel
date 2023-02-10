@@ -114,6 +114,12 @@ header span {
 	font-size: 2.4rem;
 }
 
+.emphasis {
+	text-decoration: underline;
+	font-weight: bold;
+	margin-top: 1rem;
+}
+
 #about {
 	margin: 2rem auto;
 	width: 100%;
@@ -167,9 +173,31 @@ header span {
 	font-size: 4.2rem;
 }
 
+.info {
+	position: absolute;
+	top: -47px;
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	display: none;
+	font-size: 1.8rem;
+}
+
+.info.active {
+	display: block;
+}
+
+.variant-1 .info {
+	background-color: white;
+}
+
 .variant-2 {
 	background-color: whitesmoke;
 	color: black;
+}
+
+.variant-2 .info {
+	background-color: var(--bg-secundary-color);
+	color: white;
 }
 
 .section-title {
@@ -211,6 +239,10 @@ header span {
 	gap: 5rem;
 }
 
+.techs-icons ul li {
+	position: relative;
+}
+
 .techs-icons ul li img {
 	height: 80px;
 }
@@ -243,6 +275,7 @@ header span {
 .accordion.active,
 .accordion:hover {
 	background-color: #ccc;
+	font-weight: bold;
 }
 
 .panel {
@@ -316,6 +349,7 @@ header span {
 .glider .card q {
 	text-align: center;
 	margin-bottom: 1rem;
+	font-style: italic;
 }
 
 .glider .author {
@@ -333,7 +367,7 @@ header span {
 }
 
 .glider .author p {
-	font-style: italic;
+	font-style: normal;
 }
 
 .glider__controls {

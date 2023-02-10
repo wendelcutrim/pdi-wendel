@@ -6,6 +6,7 @@ const menuButton = document.querySelector("#open-menu");
 const closeMenuButton = document.querySelector("#close-menu");
 const nav = document.querySelector("nav");
 const acc = document.querySelectorAll(".accordion");
+const liTechsIcons = document.querySelectorAll(".techs-icons li");
 
 
 if (width <= 768) {
@@ -15,10 +16,38 @@ if (width <= 768) {
 menuButton.addEventListener("click", handleMenuMobile);
 closeMenuButton.addEventListener("click", handleMenuMobile);
 nav.addEventListener("click", closeMenuMobile);
+
 acc.forEach(el => {
     el.addEventListener("click", handleAccordionClick);
 });
 
+liTechsIcons.forEach(li => {
+    li.addEventListener("mouseenter", showTooltipInfo);
+    li.addEventListener("mouseleave", closeTooltipInfo);
+})
+
+
+function showTooltipInfo(evt) {
+    const li = evt.target;
+    let techName = "";
+    const info = li.querySelector(".info");
+
+    if (li.querySelector("img")) {
+        techName = li.querySelector("img").getAttribute("title");
+    } else {
+        techName = li.querySelector("span").getAttribute("title");
+    }
+
+    info.classList.add("active");
+    info.innerText = techName.toUpperCase();
+
+}
+
+function closeTooltipInfo(evt) {
+    const li = evt.target;
+    const info = li.querySelector(".info");
+    info.classList.remove("active");
+}
 
 function handleMenuMobile(evt) {
     nav.classList.add("active");
