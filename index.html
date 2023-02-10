@@ -7,8 +7,17 @@
 		<title>PDI - Wendel</title>
 
 		<link rel="stylesheet" href="./public/css/global.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css"
+		/>
 
-		<script src="./public/js/main.js" type="module" defer></script>
+		<script src="./public/js/main.js" defer></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"
+			defer
+		></script>
+		<script src="./public/js/glider.js" defer></script>
 	</head>
 	<body>
 		<header>
@@ -34,7 +43,7 @@
 						</li>
 
 						<li>
-							<a href="#evolution">Evolução</a>
+							<a href="#goals">Metas</a>
 						</li>
 					</ul>
 				</nav>
@@ -64,7 +73,10 @@
 							estudar e tomar bastante ☕. Atualmente sou Analista
 							de Engenharia TI Jr e também trabalho como Professor
 							Generalista do curso de fullstack Node JS na
-							Rocketseat.
+							Rocketseat e adoro ensinar, pois a educação muda a vida das pessoas.
+						</p>
+						<p>
+							Meu objetivo no Banco ao longo da minha carreira é me tornar especialista em front-end e acessibilidade.
 						</p>
 					</div>
 				</article>
@@ -159,7 +171,7 @@
 			<section id="techs" class="variant-2">
 				<article class="section-title reverse">
 					<img
-						src="./public/img/light.svg"
+						src="./public/img/studies.svg"
 						alt="Homem com lâmpada na mão"
 					/>
 					<h2>conhecimentos adquiridos após entrar no banco</h2>
@@ -199,7 +211,7 @@
 			<section id="techs" class="variant-1">
 				<article class="section-title">
 					<img
-						src="./public/img/light.svg"
+						src="./public/img/knowledge.svg"
 						alt="Homem com lâmpada na mão"
 					/>
 					<h2>estudos em andamento</h2>
@@ -247,27 +259,299 @@
 			<section id="stories">
 				<article class="variant-2">
 					<h2>
-						a seguir estão as entregas realizadas ao longo do tempo
+						entregas realizadas
 					</h2>
+
+					<div class="accordion-container">
+						<button class="accordion">
+							2022
+							<span class="material-symbols-outlined">
+								expand_more
+							</span>
+						</button>
+						<div class="panel">
+							<p>
+								<span>Dezembro:</span> Atualização da primeira
+								tela da mensageria da jornada de poderes
+							</p>
+						</div>
+
+						<button class="accordion">
+							2023
+							<span class="material-symbols-outlined">
+								expand_more
+							</span>
+						</button>
+						<div class="panel">
+							<p>
+								<span>Janeiro:</span> Início da atualização da
+								mensageria de todas as telas da jornada de
+								poderes
+							</p>
+							<p>
+								<span>Fevereiro:</span>
+								<div class="panel__list">
+									<ul>
+										<li>Correção dos bugs de acessibilidade das telas da jornada de poderes.</li>
+										<li>*Início da modernização das telas da jornada de poderes com Angular.</li>
+									</ul>
+								</div>
+							</p>
+						</div>
+					</div>
 				</article>
 			</section>
 
 			<section id="swot" class="variant-1">
 				<article>
 					<h2>pontos fortes</h2>
+					<p class="sub-title">De acordo com os membros da squad</p>
+
+					<div class="glider-container">
+						<div class="glider">
+							<div class="card">
+								<q>Domina bastate as linguagens</q>
+								<q>Tempestivo (#partiu para correção dos erros de acessibilidade)</q>
+								<q>Maduro</q>
+								<q>Muito proativo</q>
+
+								<div class="author">
+									<div class="avatar"></div>
+									<p>André Ferro</p>
+								</div>
+							</div>
+							
+							<div class="card">
+								<q>Empenhado</q>
+								<q>Inteligente</q>
+								<q>Parceiro de trabalho incrível</q>
+
+								<div class="author">
+									<div class="avatar"></div>
+									<p>Vanessa Alexandra</p>
+								</div>
+							</div>
+
+							<div class="card">
+								<q>Lorem</q>
+
+								<div class="author">
+									<div class="avatar"></div>
+									<p>Lucas Queiroz</p>
+								</div>
+							</div>
+
+							<div class="card">
+								<q>Lorem</q>
+
+								<div class="author">
+									<div class="avatar"></div>
+									<p>Ana Paula R. Simoes</p>
+								</div>
+							</div>
+
+							<div class="card">
+								<q>Lorem</q>
+
+								<div class="author">
+									<div class="avatar"></div>
+									<p>Daiana Pereira</p>
+								</div>
+							</div>
+
+						</div>
+					  
+						<button aria-label="Previous" class="glider__controls prev">
+							<span class="material-symbols-outlined">
+								keyboard_double_arrow_left
+							</span>
+						</button>
+
+						<button aria-label="Next" class="glider__controls next">
+							<span class="material-symbols-outlined">
+								keyboard_double_arrow_right
+							</span>
+						</button>
+						<div role="tablist" class="dots"></div>
+					</div>
 				</article>
 			</section>
 
 			<section id="swot" class="variant-2">
 				<article>
 					<h2>pontos a melhorar</h2>
+					<p class="sub-title">De acordo com os membros da squad</p>
+
+					<div class="glider-container">
+						<div class="glider-variant-2">
+							<div class="card">
+								<q>Buscar mais parcerias quando ocorrer algum conflito/impeditivo</q>
+	
+								<div class="author">
+									<div class="avatar"></div>
+									<p>André Ferro</p>
+								</div>
+							</div>
+							
+							<div class="card">
+								<q>Nenhum</q>
+
+								<div class="author">
+									<div class="avatar"></div>
+									<p>Vanessa Alexandra</p>
+								</div>
+							</div>
+
+							<div class="card">
+								<q>Lorem</q>
+
+								<div class="author">
+									<div class="avatar"></div>
+									<p>Lucas Queiroz</p>
+								</div>
+							</div>
+
+							<div class="card">
+								<q>Lorem</q>
+
+								<div class="author">
+									<div class="avatar"></div>
+									<p>Ana Paula R. Simoes</p>
+								</div>
+							</div>
+
+							<div class="card">
+								<q>Lorem</q>
+
+								<div class="author">
+									<div class="avatar"></div>
+									<p>Daiana Pereira</p>
+								</div>
+							</div>
+
+						</div>
+					  
+						<button aria-label="Previous" class="glider__controls variant-2 prev">
+							<span class="material-symbols-outlined">
+								keyboard_double_arrow_left
+							</span>
+						</button>
+
+						<button aria-label="Next" class="glider__controls variant-2 next">
+							<span class="material-symbols-outlined">
+								keyboard_double_arrow_right
+							</span>
+						</button>
+						<div role="tablist" class="dots-variant-2"></div>
+					</div>
 				</article>
 			</section>
 
-			<section id="evolution" class="variant-1">
-				<article>
-					<h2>Evolução</h2>
+			<section id="goals" class="variant-1">
+				<article class="section-title">
+					<img
+						src="./public/img/goals.svg"
+						alt="Homem com quadro de objetivos"
+					/>
+					<h2>metas</h2>
 				</article>
+
+				<div class="accordion-container">
+					<button class="accordion">
+						curto prazo (até dezembro de 2023)
+						<span class="material-symbols-outlined">
+							expand_more
+						</span>
+					</button>
+					<div class="panel">
+						<p>
+							<span>Estudos:</span>
+						</p>
+						<div class="panel__list">
+							<ul>
+								<li>Dominar 100% o Angular</li>
+								<li>Finalizar o curso de desenvolvimento e construção de layouts com acessibilidade</li>
+								<li>Aprofundar meus conhecimentos em testes unitários e end to end</li>
+								<li>Aprofundar mais os meus conhecimentos em Docker</li>
+								<li>Aprofundar meus conhecimentos em Java</li>
+							</ul>
+						</div>
+
+						<p style="margin-top: 1rem;">
+							<span>Trabalho:</span>
+							<div class="panel__list">
+								<ul>
+									<li>Melhorar meu tempo de desenvolvimento</li>
+									<li>Realizar várias entregas com qualidade pensando na satisfação do cliente</li>
+									<li>Aprofundar mais o meu conhecimento no fluxo geral do banco e arquitetura</li>
+								</ul>
+							</div>
+						</p>
+					</div>
+				</div>
+
+				<div class="accordion-container">
+					<button class="accordion">
+						médio prazo (até dezembro de 2024)
+						<span class="material-symbols-outlined">
+							expand_more
+						</span>
+					</button>
+					<div class="panel">
+						<p>
+							<span>Estudos:</span>
+						</p>
+						<div class="panel__list">
+							<ul>
+								<li>Dominar 100% o Java</li>
+								<li>Aprofundar meus conhecimentos em AWS e tirar as certificações</li>
+								<li>Iniciar os estudos em desenvolvimento mobile (Android)</li>
+								<li>Iniciar estudos em gestão de equipe, liderança</li>
+								<li>Aprofundar meus conhecimentos em agile</li>
+							</ul>
+						</div>
+
+						<p style="margin-top: 1rem;">
+							<span>Trabalho:</span>
+							<div class="panel__list">
+								<ul>
+									<li>Dominar 100% a arquitetura do banco</li>
+									<li>Ganhar mérito do banco</li>
+									<li>Ministrar workshops/cursos no banco</li>
+								</ul>
+							</div>
+						</p>
+					</div>
+
+					<button class="accordion">
+						longo prazo (até dezembro de 2026)
+						<span class="material-symbols-outlined">
+							expand_more
+						</span>
+					</button>
+					<div class="panel">
+						<p>
+							<span>Estudos:</span>
+						</p>
+						<div class="panel__list">
+							<ul>
+								<li>Dominar 100% o desenvolvimento mobile com Android</li>
+								<li>Iniciar os estudos em desenvolvimento mobile (iOS)</li>
+							</ul>
+						</div>
+
+						<p style="margin-top: 1rem;">
+							<span>Trabalho:</span>
+							<div class="panel__list">
+								<ul>
+									<li>Ser promovido para pleno</li>
+									<li>Virar ponto focal da RT na CSAH</li>
+									<li>Ser referência em desenvolvimento com acessibilidade</li>
+								</ul>
+							</div>
+						</p>
+					</div>
+				</div>
 			</section>
 		</main>
 
@@ -276,8 +560,8 @@
 				<p>
 					made with 🖤 by&nbsp;
 					<a href="https://github.com/wendelcutrim" target="_blank">
-						Wendel Cutrim</a
-					>
+						Wendel Cutrim
+					</a>
 				</p>
 			</section>
 		</footer>
