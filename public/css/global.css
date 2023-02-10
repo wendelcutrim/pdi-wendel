@@ -306,14 +306,11 @@ header span {
 	justify-content: center;
 	align-items: center;
 	margin: 1rem;
+	padding: 1rem;
 }
 
 #swot.variant-2 .glider .card {
 	border: 1px solid var(--bg-secundary-color);
-}
-
-.glider .card {
-	padding: 1rem;
 }
 
 .glider .card q {
@@ -321,7 +318,14 @@ header span {
 	margin-bottom: 1rem;
 }
 
-.glider .author .avatar {
+.glider .author {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.glider .author .avatar img {
 	border-radius: 50%;
 	height: 80px;
 	background-color: white;
@@ -358,11 +362,13 @@ header span {
 
 .glider__controls span:hover {
 	color: var(--bg-primary-color);
-	border: 2px solid var(--bg-primary-color);
+	background-color: var(--bg-primary-color);
+	color: white;
 }
 
 #swot.variant-2 .glider__controls span:hover {
 	color: white;
+	background-color: var(--bg-secundary-color);
 }
 
 .glider__controls.prev,
@@ -387,6 +393,11 @@ header span {
 	background-color: #eee;
 }
 
+#goals .accordion:hover,
+#goals .accordion.active {
+	background-color: #ccc;
+}
+
 footer {
 	background-color: var(--bg-primary-color);
 	color: var(--text-primary-color);
@@ -397,8 +408,15 @@ footer {
 }
 
 footer a {
-	color: var(--bg-secundary-color);
+	color: black;
 	font-weight: bold;
+	transition: 0.6s all;
+}
+
+footer a:hover {
+	color: var(--bg-secundary-color);
+	padding: 0.5rem 1rem;
+	background-color: white;
 }
 
 @media (max-width: 768px) {
@@ -431,6 +449,11 @@ footer a {
 		display: flex;
 		flex-direction: column;
 		margin-top: 20rem;
+	}
+
+	.section-title img {
+		height: 200px;
+		width: 100%;
 	}
 
 	.techs-icons ul {
