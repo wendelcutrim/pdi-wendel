@@ -7,6 +7,8 @@ const closeMenuButton = document.querySelector("#close-menu");
 const nav = document.querySelector("nav");
 const acc = document.querySelectorAll(".accordion");
 const liTechsIcons = document.querySelectorAll(".techs-icons li");
+const images = document.querySelectorAll('img');
+//const goalsChecksInputs = document.querySelectorAll('#goals input[type="checkbox"]');
 
 
 if (width <= 768) {
@@ -24,7 +26,19 @@ acc.forEach(el => {
 liTechsIcons.forEach(li => {
     li.addEventListener("mouseenter", showTooltipInfo);
     li.addEventListener("mouseleave", closeTooltipInfo);
-})
+});
+
+images.forEach(img => img.setAttribute('aria-hidden', true));
+
+/* goalsChecksInputs.forEach(input => {
+    const checked = input.hasAttribute('checked');
+
+    if (checked) {
+        input.nextElementSibling.style.color = 'green';
+        input.nextElementSibling.style.fontWeight = 'bold';
+
+    }
+}) */ //Realizado lógica no CSS
 
 
 function showTooltipInfo(evt) {
@@ -58,6 +72,7 @@ function handleMenuMobile(evt) {
             menuButton.classList.remove("active");
 
             closeMenuButton.classList.add("active");
+            closeMenuButton.focus();
         }
     }
 
@@ -67,6 +82,7 @@ function handleMenuMobile(evt) {
 
             menuButton.classList.add("active");
             nav.classList.remove("active");
+            menuButton.focus();
 
         }
     }
@@ -78,6 +94,7 @@ function closeMenuMobile(evt) {
         nav.classList.remove("active")
         closeMenuButton.classList.remove("active");
         menuButton.classList.add("active");
+        menuButton.focus();
     }
 }
 
@@ -93,12 +110,14 @@ function handleAccordionClick(evt) {
         panel.style.display = "none";
         expand.innerText = "expand_more";
         acc.style.marginBottom = "1rem";
+        acc.setAttribute('aria-expanded', false)
 
 
     } else {
         panel.style.display = "block";
         expand.innerText = "expand_less";
         acc.style.marginBottom = "0";
+        acc.setAttribute('aria-expanded', true)
 
     }
 }

@@ -18,7 +18,7 @@
 			<section class="container">
 				<h1>Wendel Cutrim</h1>
 
-				<nav>
+				<nav role="menu">
 					<ul>
 						<li>
 							<a href="#about">Sobre mim</a>
@@ -42,12 +42,12 @@
 					</ul>
 				</nav>
 
-				<button aria-label="menu" class="menu-mobile" id="open-menu">
-					<span class="material-symbols-outlined"> menu </span>
+				<button aria-label="menu" class="menu-mobile" id="open-menu" aria-label="menu">
+					<span class="material-symbols-outlined" aria-hidden="true"> menu </span>
 				</button>
 
-				<button aria-label="fechar" class="menu-mobile" id="close-menu">
-					<span class="material-symbols-outlined"> close </span>
+				<button aria-label="fechar" class="menu-mobile" id="close-menu" aria-label="fechar menu">
+					<span class="material-symbols-outlined" aria-hidden="true"> close </span>
 				</button>
 			</section>
 		</header>
@@ -58,6 +58,7 @@
 					<img
 						src="https://avatars.githubusercontent.com/u/71237924?v=4"
 						alt="Wendel Cutrim - Foto"
+						aria-hidden="true"
 					/>
 
 					<div class="text-content">
@@ -273,7 +274,7 @@
 					</h2>
 
 					<div class="accordion-container">
-						<button class="accordion" aria-label="entregas realizadas em 2022" aria-describedby="panel-2022">
+						<button class="accordion" aria-label="entregas realizadas em 2022" aria-describedby="panel-2022" aria-expanded="false">
 							2022
 							<span class="material-symbols-outlined">
 								expand_more
@@ -286,7 +287,7 @@
 							</p>
 						</div>
 
-						<button class="accordion" aria-label="entregas realizadas em 2023" aria-describedby="panel-2023">
+						<button class="accordion" aria-label="entregas realizadas em 2023" aria-describedby="panel-2023" aria-expanded="false">
 							2023
 							<span class="material-symbols-outlined">
 								expand_more
@@ -298,18 +299,63 @@
 								mensageria de todas as telas da jornada de
 								poderes
 							</p>
+
 							<p>
 								<span>Fevereiro:</span>
 								<div class="panel__list">
 									<ul>
-										<li>Correção dos bugs de acessibilidade das telas da jornada de poderes.</li>
+										<li>Correção dos bugs de acessibilidade das telas da jornada de poderes. (legado)</li>
 										<li> 
 											<span style="color: red; font-weight: bold; font-size: 1.8rem;">*</span> 
-											Início da modernização das telas da jornada de poderes com Angular.
+											Início do desenvolvimento projeto <strong>Acompanhamento de Proposta - Poderes</strong> utilizando Angular.
 										</li>
 									</ul>
 								</div>
 							</p>
+
+							<p>
+								<span>Março:</span>
+								<div class="panel__list">
+									<ul>
+										<li></li>
+									</ul>
+								</div>
+							</p>
+
+							<p>
+								<span>Abril:</span>
+								<div class="panel__list">
+									<ul>
+										<li></li>
+									</ul>
+								</div>
+							</p>
+
+							<p>
+								<span>Maio:</span>
+								<div class="panel__list">
+									<ul>
+										<li>
+											Entrega da primeira tela <strong>(lista de solicitações)</strong> do projeto de acompanhamento de propostas - poderes. Nesta entrega foi desenvolvidos vários componentes como: <strong>Página, Header, Datepicker, Select, Tabela, Paginator, Alert</strong>.
+										</li>
+										<li>Entrega da tela de erro do projeto acompanhamento de propostas - poderes.</li>
+										<li>Entrega da tela de empty state (quando a conta não possui nenhuma solicitação) do projeto acompanhamento de propostas - poderes.</li>
+									</ul>
+								</div>
+							</p>
+
+							<p>
+								<span>Junho:</span>
+								<div class="panel__list">
+									<ul>
+										<li>
+											Entrega da segunda tela <strong>(detalhes da solicitação)</strong> do projeto de acompanhamento de propostas - poderes. Nesta entrega foi desenvolvido vários componentes como: <strong>Página, Stepper, Estado do acompanhamento</strong>.
+										</li>
+										<li>Correção de 15 bugs de acessibilidade</li>
+									</ul>
+								</div>
+							</p>
+
 						</div>
 					</div>
 				</article>
@@ -550,7 +596,7 @@
 				<div class="accordion-container">
 					<button class="accordion" aria-label="curto prazo (até dezembro de 2023)" aria-describedby="panel-text-1">
 						curto prazo (até dezembro de 2023)
-						<span class="material-symbols-outlined">
+						<span class="material-symbols-outlined" aria-hidden="true">
 							expand_more
 						</span>
 					</button>
@@ -560,11 +606,11 @@
 						</p>
 						<div class="panel__list">
 							<ul>
-								<li>Dominar 100% o Angular</li>
-								<li>Finalizar o curso de desenvolvimento e construção de layouts com acessibilidade</li>
-								<li>Aprofundar meus conhecimentos em testes unitários e end to end</li>
-								<li>Aprofundar mais os meus conhecimentos em Docker</li>
-								<li>Aprofundar meus conhecimentos em Java</li>
+								<li><input type="checkbox" id="goals__2023--studies-1" checked> <label for="goals__2023--studies-1">Dominar bem o Angular</label></li>
+								<li><input type="checkbox" id="goals__2023--studies-2"> <label for="goals__2023--studies-2">Finalizar o curso de desenvolvimento e construção de layouts com acessibilidade</label></li>
+								<li><input type="checkbox" id="goals__2023--studies-3" checked> <label for="goals__2023--studies-3">Aprofundar meus conhecimentos em testes unitários no front-end</label></li>
+								<li><input type="checkbox" id="goals__2023--studies-4" > <label for="goals__2023--studies-4">Aprofundar mais os meus conhecimentos em Docker</label></li>
+								<li><input type="checkbox" id="goals__2023--studies-5" > <label for="goals__2023--studies-5">Aprofundar meus conhecimentos em Java</label></li>
 							</ul>
 						</div>
 
@@ -572,9 +618,9 @@
 							<span>Trabalho:</span>
 							<div class="panel__list">
 								<ul>
-									<li>Melhorar meu tempo de desenvolvimento</li>
-									<li>Realizar várias entregas com qualidade pensando na satisfação do cliente</li>
-									<li>Aprofundar mais o meu conhecimento no fluxo geral do banco e arquitetura</li>
+									<li><input type="checkbox" id="goals__2023--work-1"> <label for="goals__2023--work-1">Melhorar meu tempo de desenvolvimento</label></li>
+									<li><input type="checkbox" id="goals__2023--work-2"> <label for="goals__2023--work-2">Realizar várias entregas com qualidade pensando na satisfação do cliente</label></li>
+									<li><input type="checkbox" id="goals__2023--work-3"> <label for="goals__2023--work-3">Aprofundar mais o meu conhecimento no fluxo geral do banco e arquitetura</label></li>
 								</ul>
 							</div>
 						</p>
@@ -584,7 +630,7 @@
 				<div class="accordion-container">
 					<button class="accordion" aria-label="médio prazo (até dezembro de 2024)" aria-describedby="panel-text-2">
 						médio prazo (até dezembro de 2024)
-						<span class="material-symbols-outlined">
+						<span class="material-symbols-outlined" aria-hidden="true">
 							expand_more
 						</span>
 					</button>
@@ -594,11 +640,11 @@
 						</p>
 						<div class="panel__list">
 							<ul>
-								<li>Dominar 100% o Java</li>
-								<li>Aprofundar meus conhecimentos em AWS e tirar as certificações</li>
-								<li>Iniciar os estudos em desenvolvimento mobile (Android)</li>
-								<li>Iniciar estudos em gestão de equipe, liderança</li>
-								<li>Aprofundar meus conhecimentos em agile</li>
+								<li><input type="checkbox" id="goals__2024--studies-1"> <label for="goals__2024--studies-1">Dominar bem o Java</label></li>
+								<li><input type="checkbox" id="goals__2024--studies-2" > <label for="goals__2024--studies-2">Aprofundar meus conhecimentos em AWS e tirar as certificações</label></li>
+								<li><input type="checkbox" id="goals__2024--studies-3" > <label for="goals__2024--studies-3">Iniciar os estudos em desenvolvimento mobile (Android o iOS - a definir ainda)</label></li>
+								<li><input type="checkbox" id="goals__2024--studies-4" > <label for="goals__2024--studies-4">Iniciar estudos em gestão de equipe, liderança</label></li>
+								<li><input type="checkbox" id="goals__2024--studies-5" > <label for="goals__2024--studies-5">Aprofundar meus conhecimentos em agile</label></li>
 							</ul>
 						</div>
 
@@ -606,17 +652,19 @@
 							<span>Trabalho:</span>
 							<div class="panel__list">
 								<ul>
-									<li>Dominar 100% a arquitetura do banco</li>
-									<li>Ganhar mérito do banco</li>
-									<li>Ministrar workshops/cursos no banco</li>
+									<li><input type="checkbox" id="goals__2024--work-1"> <label for="goals__2024--work-1">Dominar a arquitetura do banco</label></li>
+									<li><input type="checkbox" id="goals__2024--work-2"> <label for="goals__2024--work-2">Ganhar mérito do banco</label></li>
+									<li><input type="checkbox" id="goals__2024--work-3"> <label for="goals__2024--work-3">Ministrar workshops/cursos no banco</label></li>
 								</ul>
 							</div>
 						</p>
 					</div>
+				</div>
 
+				<div class="accordion-container">
 					<button class="accordion" aria-label="longo prazo (até dezembro de 2026)" aria-describedby="panel-text-3">
 						longo prazo (até dezembro de 2026)
-						<span class="material-symbols-outlined">
+						<span class="material-symbols-outlined" aria-hidden="true">
 							expand_more
 						</span>
 					</button>
@@ -626,8 +674,8 @@
 						</p>
 						<div class="panel__list">
 							<ul>
-								<li>Dominar 100% o desenvolvimento mobile com Android</li>
-								<li>Iniciar os estudos em desenvolvimento mobile (iOS)</li>
+								<li><input type="checkbox" id="goals__2026--studies-1"> <label for="goals__2026--studies-1">Dominar o desenvolvimento mobile com Android</label></li>
+								<li><input type="checkbox" id="goals__2026--studies-2"> <label for="goals__2026--studies-2">Iniciar os estudos em desenvolvimento mobile (iOS)</label></li>
 							</ul>
 						</div>
 
@@ -635,9 +683,8 @@
 							<span>Trabalho:</span>
 							<div class="panel__list">
 								<ul>
-									<li>Ser promovido para pleno</li>
-									<li>Virar ponto focal da RT na CSAH</li>
-									<li>Ser referência em desenvolvimento com acessibilidade</li>
+									<li><input type="checkbox" id="goals__2026--work-1"> <label for="goals__2026--work-1">Ser promovido para pleno</label></li>
+									<li><input type="checkbox" id="goals__2026--work-2"> <label for="goals__2026--work-2">Ser referência em desenvolvimento com acessível na RT ou Comunidade</label></li>
 								</ul>
 							</div>
 						</p>
@@ -650,7 +697,7 @@
 			<section class="container">
 				<p>
 					made with 🖤 by&nbsp;
-					<a href="https://github.com/wendelcutrim" target="_blank">
+					<a href="https://github.com/wendelcutrim" target="_blank" aria-label="ir para github de Wendel Cutrim">
 						Wendel Cutrim
 					</a>
 				</p>
