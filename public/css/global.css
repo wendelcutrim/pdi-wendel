@@ -514,3 +514,12 @@ footer a:hover {
         display: none;
     }
 }
+
+#curriculum {
+    margin-top: 1rem;
+}
+
+#curriculum h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
